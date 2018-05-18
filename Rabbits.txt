@@ -1,0 +1,80 @@
+#By Joshua Wells
+#Rabbits, Rabbits, Rabbits (Programming Project #4)
+#CS 1400
+#Due March 3, 2018
+#starting with one pair of rabbits, how many months will it take to fill 500 cages (one pair per cage) if two
+#rabbits are born each month per adult pair. Rabbits can only breed if they have been adults for 1 month.
+#tkinter part was aided by https://www.youtube.com/watch?v=x5iWwHuM6L4
+import sys
+
+
+def main():
+    intro()
+    cage = cages()
+    table(cage)
+    
+    
+def intro():
+    print("This program breeds rabbits!\nTo find out how many months it will take you to fill your cages,")
+    y = "enter how many cages you have."
+    center(y)
+
+def center(f):
+    print("{0:^63}".format(f),end='\n\n')
+
+def cages():
+    c = input("What is the total number of cages? ")
+    validinput(c)
+    c = int(c)
+    while c > 999999:
+        print("aint nobody got that many cages! If they did, they would need a different program...")
+        c = input("please enter a number less than 1,000,000: ")
+        validinput(c)
+        c = int(c)
+    return(c)
+
+def validinput(x):
+    try:
+        int(x)
+    except ValueError:
+        print("Sorry, your input was not an integer")
+        sys.exit()
+    except:
+        print("What did you do!?")
+        sys.exit()
+    
+
+def table(cage):
+#top of table
+    print("Month  Adult  Babies Total\n--------------------------")
+#math for each row
+    month = 1
+    adults = 1
+    babies = 0
+    total = 1
+    newbabies = 0
+    adults1 = 0
+    format(month)
+    format(adults)
+    format(babies)
+    print(total)
+    while total < cage:
+        month += 1
+        format(month)
+        adults1 = adults
+        adults = babies + adults
+        format(adults)
+        babies = adults1
+        format(babies)
+        total = babies + adults
+        print(total)
+    print("Cages will run out in the",month,"th month")
+
+def format(x):
+    print("{0:<7}".format(x), end='')
+
+
+    
+    
+if __name__ == '__main__':
+    main()

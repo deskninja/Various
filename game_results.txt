@@ -1,0 +1,40 @@
+Name and Score of each player in the order entered:
+g 100
+t 300 
+a 30
+y 150
+o 300
+i 100
+e 300
+p 150
+
+Name and Score of each player in alphabetical order:a 30
+*e 300
+g 100
+i 100
+*o 300
+p 150
+*t 300 
+y 150
+
+Name and Score of each player from highest to lowest.*t 300 
+*o 300
+*e 300
+y 150
+p 150
+g 100
+i 100
+a 30
+
+Name and Score of each player from Lowest Score to Highest Score:a 30
+i 100
+g 100
+p 150
+y 150
+*e 300
+*o 300
+*t 300 
+
+Congratulations to the winner(s): *t, *o, *e, 
+better luck next time: a
+the team average score was: 178
